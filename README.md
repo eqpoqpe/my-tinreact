@@ -16,17 +16,17 @@ Children shouldn't update rendering before parent
 ## process
 
 ```
-         +--------+
-         | Layout |
-         +--------+
-              |
-       +--------------+
-       | singleLayout |
-       +--------------+
-          /        \
-+------------+ +-----------------+
-| mappingDOM | | container store |
-+------------+ +-----------------+
+                         +--------+
+                         | Layout |
+                         +--------+
+                          /      \
+            +--------------+   +---------------+
+            | singleLayout |   | mappingLayout |
+            +--------------+   +---------------+
+               /        \
++-----------------+ +------------+ 
+| container store | | mappingDOM |
++-----------------+ +------------+ 
 ```
 
 ## default enabled memoization
