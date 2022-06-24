@@ -19,14 +19,14 @@ Children shouldn't update rendering before parent
                          +--------+
                          | Layout |
                          +--------+
-                          /      \
-            +--------------+   +------------+
-            | singleLayout |   | dispatcher |
-            +--------------+   +------------+
-               /        \
-+-----------------+ +------------+ 
-| container store | | mappingDOM |
-+-----------------+ +------------+ 
+                          /
+            +--------------+    +------------+
+            | singleLayout | -- | dispatcher |
+            +--------------+    +------------+
+               /        \        /
++-----------------+  +------------+
+| container store |  | mappingDOM |
++-----------------+  +------------+
 ```
 
 ## default enabled memoization
