@@ -20,9 +20,9 @@ Children shouldn't update rendering before parent
                          | Layout |
                          +--------+
                           /      \
-            +--------------+   +---------------+
-            | singleLayout |   | mappingLayout |
-            +--------------+   +---------------+
+            +--------------+   +------------+
+            | singleLayout |   | dispatcher |
+            +--------------+   +------------+
                /        \
 +-----------------+ +------------+ 
 | container store | | mappingDOM |
