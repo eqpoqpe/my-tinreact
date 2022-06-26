@@ -35,8 +35,8 @@ Children shouldn't update rendering before parent
 
 ## reactive
 
-``
-``
+```
+```
 
 ## default enabled memoization
 
