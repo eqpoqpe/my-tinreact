@@ -27,10 +27,6 @@ Children shouldn't update rendering before parent
  +-----------+      +------------+    +----------+
  | Container |      | MappingDOM | -- | HTML DOM |
  +-----------+      +------------+    +----------+
-       |                  |
- +------------+    +---------------+
- | Dispatcher | -- | mappingLayout |
- +------------+    +---------------+
 ```
 
 ## default enabled memoization
