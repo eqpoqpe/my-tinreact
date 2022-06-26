@@ -28,9 +28,13 @@ Children shouldn't update rendering before parent
          | singleLayout |
          +--------------+
          /             \
- +-----------+      +------------+    +----------+
- | Container |      | MappingDOM | -- | HTML DOM |
- +-----------+      +------------+    +----------+
+ +-----------+      +------------+
+ | Container |      | MappingDOM |
+ +-----------+      +------------+
+                          |
+                     +----------+
+                     | HTML DOM |
+                     +----------+
 ```
 
 ## reactive
