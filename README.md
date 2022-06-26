@@ -13,7 +13,11 @@
 Children shouldn't update rendering before parent
 ```
 
-## process
+<details>
+ <summary><h2>processor</h2></summary>
+</details>
+
+## render
 
 ```
            +--------+
@@ -28,6 +32,11 @@ Children shouldn't update rendering before parent
  | Container |      | MappingDOM | -- | HTML DOM |
  +-----------+      +------------+    +----------+
 ```
+
+## reactive
+
+``
+``
 
 ## default enabled memoization
 
