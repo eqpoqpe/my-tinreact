@@ -13,10 +13,6 @@
 Children shouldn't update rendering before parent
 ```
 
-<details>
- <summary><h2>processor</h2></summary>
-</details>
-
 ## render
 
 ```
@@ -40,6 +36,17 @@ Children shouldn't update rendering before parent
 ## reactive
 
 ```
+         +------------+
+         | Dispatcher |
+         +------------+
+          /          \
++-----------+      +------------+    +----------+
+| Container |      | MappingDOM | -- | HTML DOM |
++-----------+      +------------+    +----------+
+          \          //
+       +---------------+
+       | mappingLayout |
+       +---------------+
 ```
 
 ## default enabled memoization
