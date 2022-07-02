@@ -71,3 +71,26 @@ should re-exec calling the dispatcher.
    |    / \
   [ ] [ ] [ ]    0,0,1,0,0,0 |      0,0,1,0,2,0 | 0,0,1,0,2,1
 ```
+
+## Example
+```js
+function ShowArea(el) {
+  return $(
+    "div",
+    {
+      "click": [
+        (e) => { el.style.visibility="hidden"; }
+      ]
+    }
+  )
+}
+
+function StatusBar() {
+  const contentArea = document.createElement("div");
+
+  return $(
+    "div",
+    [contentArea, $(ShowArea, contentArea)]
+  );
+}
+```
