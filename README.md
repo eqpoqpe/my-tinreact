@@ -74,23 +74,43 @@ should re-exec calling the dispatcher.
 
 ## Example
 ```js
-function ShowArea(el) {
-  return $(
-    "div",
-    {
-      "click": [
-        (e) => { el.style.visibility="hidden"; }
-      ]
-    }
-  )
+function ShowArea(e, el) {
+  $("div",
+    { e },
+    [el]
+  );
 }
 
 function StatusBar() {
-  const contentArea = document.createElement("div");
+  const [state, setState] = naiveState(0);
+  const [click, disClick] = naiveEvent("click");
+  
+  // called $html returns reference of HTMLElement
+  const div = $html("div",
+    {
+      class: "base"
+    },
+    $html("div",
+      {
+        class: "base"
+      }
+    )
+  );
 
-  return $(
-    "div",
-    [contentArea, $(ShowArea, contentArea)]
+  disClick([
+    () => {
+      if (state > 5) {
+        console.log("5 times");
+      }
+
+      console.log("clicked");
+    }
+  ]);
+
+
+  return $("div",
+    { click },
+    [ShowArea(click, div)]
   );
 }
 ```
