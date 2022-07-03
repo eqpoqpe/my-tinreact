@@ -110,7 +110,7 @@ function StatusBar() {
 
   return $("div",
     { click },
-    [$(ShowArea(click, div))]
+    [$(ShowArea, click, div)]
   );
 }
 ```
